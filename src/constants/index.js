@@ -54,7 +54,7 @@ export const myProjects = [
         ],
         href: 'https://stamperm.github.io/velocirapt-vars--pokedex/',
         logo: '',
-        image: '/assets/projects/Pokédex-Battle-Planner.png',
+        image: '/assets/projects/battleplanner.png',
         tags: [
             {
                 id: 1,
