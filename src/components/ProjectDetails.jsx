@@ -17,7 +17,7 @@ const ProjectDetails = ({
           >
               <button
                   onClick={closeModal}
-                  className="absolute p-2 rounded-sm top-2 right-2 sm:top-5 sm:right-5 bg-midnight hover:bg-gray-500 z-10"
+                  className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
               >
                   <img
                       src={`${import.meta.env.BASE_URL}assets/close.svg`}
