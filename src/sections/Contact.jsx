@@ -2,6 +2,7 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Alert from '../components/Alert';
 import { Particles } from '../components/Particles';
+import { title } from 'motion/react-client';
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -33,11 +34,12 @@ const Contact = () => {
                 'service_pyfwgq6',
                 'template_ll9qkdi',
                 {
-                    from_name: formData.name,
-                    to_name: 'Brian Moore',
-                    from_email: formData.email,
+                    name: formData.name,
+                    time: new Date().toLocaleTimeString(),
+                    email: formData.email,
                     to_email: 'brianlmoore803@gmail.com',
-                    message: formData.message
+                    message: formData.message,
+                    title: `New Contact Form Submission ${formData.name}`
                 },
                 '3RTZZzriSu2THTkEm'
             );

@@ -71,9 +71,9 @@ const HeroText = () => {
                 </div>
             </div>
             {/* Mobile View */}
-            <div className="flex- flex-col space-y-6 md:hidden">
+            <div className="flex items-center flex-col space-y-6 md:hidden">
                 <motion.p
-                    className="text-4xl font-medium"
+                    className="text-2xl font-medium"
                     variants={variants}
                     initial="hidden"
                     animate="visible"
@@ -83,13 +83,13 @@ const HeroText = () => {
                 </motion.p>
                 <div>
                     <motion.p
-                        className="text-5xl font-black text-neutral-300"
+                        className="text-3xl font-black text-neutral-300"
                         variants={variants}
                         initial="hidden"
                         animate="visible"
                         transition={{ delay: 1.2 }}
                     >
-                        Building
+                        A Developer <br /> Dedicated to Building
                     </motion.p>
                     <motion.div
                         variants={variants}
@@ -99,18 +99,27 @@ const HeroText = () => {
                     >
                         <FlipWords
                             words={words}
-                            className="font-bold text-white text-7xl text-center"
+                            className="font-bold text-white text-4xl text-center"
                         />
                     </motion.div>
                     <motion.p
-                        className="text-center text-4xl font-black text-neutral300"
+                        className="text-center text-2xl font-black text-neutral300"
                         variants={variants}
                         initial="hidden"
                         animate="visible"
                         transition={{ delay: 1.8 }}
                     >
-                        Web Applications
+                        Web Solutions
                     </motion.p>
+                    <motion.img
+                        src="./assets/brian.JPG"
+                        alt=""
+                        className="w-30 h-30 object-cover rounded-full m-auto mt-4"
+                        variants={variants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ delay: 1.8 }}
+                    />
                 </div>
             </div>
         </div>

@@ -13,6 +13,9 @@ const Projects = () => {
         y.set(e.clientY + 20);
     };
     const [preview, setPreview] = useState(null);
+    // Detect if screen is small (sm) using a media query
+    const isSmallScreen = window.matchMedia('(max-width: 640px)').matches;
+
     return (
         <section
             id="projects"
@@ -32,10 +35,10 @@ const Projects = () => {
                 <Project
                     key={project.id}
                     {...project}
-                    setPreview={setPreview}
+                    setPreview={isSmallScreen ? () => {} : setPreview}
                 />
             ))}
-            {preview && (
+            {!isSmallScreen && preview && (
                 <motion.img
                     className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
                     src={`${import.meta.env.BASE_URL}${preview}`}
