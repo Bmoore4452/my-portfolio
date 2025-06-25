@@ -27,7 +27,7 @@ const ProjectDetails = ({
               <img
                   src={`${import.meta.env.BASE_URL}${image}`}
                   alt={title}
-                  className="w-full rounded-t-2xl max-sm:h-50 "
+                  className="w-full h-auto max-sm:h-[200px] rounded-t-2xl object-cover "
               />
               <div className="p-8 max-sm:text-sm">
                   <h5 className="mb-2 text-2xl font-bold text-white">
