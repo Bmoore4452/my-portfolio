@@ -27,7 +27,7 @@ const Education = () => {
                                     {item.school}
                                 </h3>
                                 <img
-                                    src={item.image}
+                                    src={`${import.meta.env.BASE_URL}${item.image}`}
                                     alt=""
                                     style={{ height: '100px', width: 'auto' }}
                                     className="mx-auto mt-2"
