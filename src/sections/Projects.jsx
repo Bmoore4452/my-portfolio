@@ -20,7 +20,7 @@ const Projects = () => {
         <section
             id="projects"
             onMouseMove={handleMouseMove}
-            className="relative c-space max-h-screen mt-20 md:mt-30"
+            className="relative c-space max-h-screen mt-30"
         >
             <Particles
                 className="absolute inset-0 -z-50"
