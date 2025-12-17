@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MyProjects Schema",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "id",
+            "title",
+            "description",
+            "subDescription",
+            "href",
+            "logo",
+            "image",
+            "tags"
+        ],
+        "properties": {
+            "id": {
+                "type": "number",
+                "description": "Unique identifier for the project"
+            },
+            "title": {
+                "type": "string",
+                "description": "Project title"
+            },
+            "description": {
+                "type": "string",
+                "description": "Brief project description"
+            },
+            "subDescription": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "Detailed bullet points about the project"
+            },
+            "href": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to the live project"
+            },
+            "logo": {
+                "type": "string",
+                "description": "Path to project logo"
+            },
+            "image": {
+                "type": "string",
+                "description": "Path to project screenshot/image"
+            },
+            "tags": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["id", "name", "path"],
+                    "properties": {
+                        "id": {
+                            "type": "number",
+                            "description": "Unique identifier for the tag"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Technology or framework name"
+                        },
+                        "path": {
+                            "type": "string",
+                            "description": "Path to technology logo/icon"
+                        }
+                    }
+                },
+                "description": "Technologies and frameworks used in the project"
+            }
+        }
+    }
+}
